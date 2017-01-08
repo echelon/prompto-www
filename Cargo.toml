@@ -1,0 +1,25 @@
+[package]
+  name = "prompto-www"
+  version = "0.0.1"
+  authors = [ "Brandon Thomas <bt@brand.io>",
+              "Brandon Thomas <echelon@gmail.com>" ]
+
+[[bin]]
+  name = "prompto-www"
+
+[dependencies]
+  iron = "0.4.*"
+  lazy_static = "0.2.*"
+  log = "0.3.*"
+  mount = "0.2.*" # Path mounting middleware for Iron
+  multipart = { version = "0.9.0-alpha.9", features = ["hyper", "server", "client", "iron"] }
+  params = "0.3.*"
+  resolve = "0.1.*"
+  router = "0.4.*"
+  rustc-serialize = "0.3.22"
+  staticfile = "0.3.*" # Iron static file serving plugin
+  time = "0.1.*"
+
+  # For my own personal development,
+  prompto = { path = "../prompto" }
+  #prompto = "0.0.1"
