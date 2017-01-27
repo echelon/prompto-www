@@ -1,5 +1,7 @@
 *.iml
+*node_modules*
 *~
 .idea/
 TODO.md
 target/
+www/output/

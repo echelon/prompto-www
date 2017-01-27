@@ -5,9 +5,11 @@
   </head>
   <body>
     <h1>It's Picture Time</h1>
-    <form action="/upload" enctype="multipart/form-data" method="post">
-      <input type="file" name="image" id="image">
+    <form id="form" action="/upload" enctype="multipart/form-data" method="post" class="dropzones">
+      <input type="file" name="file" id="file">
       <button>Upload</button>
+      <img id='img'>
     </form>
+    <script src="./output/main.built.js" type="application/javascript"></script>
   </body>
 </html>

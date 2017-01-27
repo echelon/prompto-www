@@ -52,6 +52,7 @@ fn main() {
 fn start_server(port: u16) {
   let mut mount = Mount::new();
   mount.mount("/", Static::new(Path::new("www/index.html")));
+  mount.mount("/output", Static::new(Path::new("www/output/")));
   mount.mount("/upload", upload_handler);
 
   info!("Starting server on port {}...", port);
