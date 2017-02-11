@@ -2,14 +2,37 @@
 <html>
   <head>
     <title>It's Picture Time</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>It's Picture Time</h1>
-    <form id="form" action="/upload" enctype="multipart/form-data" method="post" class="dropzones">
-      <input type="file" name="file" id="file">
-      <button>Upload</button>
-      <img id='img'>
-    </form>
+    <div id="screen">
+    </div>
+      <div id="main">
+        <div class="bubble">
+          <div id="chocobro"></div>
+          <h1>Picture Time</h1>
+          <div class="clear"></div>
+        </div>
+        <div class="bubble">
+          <form id="form" action="/upload" enctype="multipart/form-data" 
+              method="post" class="dropzones">
+            <input type="file" name="file" id="file">
+            <button>Upload</button>
+            <img id='img'>
+          </form>
+        </div>
+        <div class="bubble">
+          <h3>What is this?</h3>
+          <p>
+            This tool applies an image mask to photos you upload.
+            There's no utility here; it's just a gag from Final Fantasy XV.
+            Images are not uploaded or hosted, so you'll have to download them.
+            The program was written in Rust (backend) and Typescript (frontend)
+            by <a href="http://brand.io">Brandon Thomas</a>.
+          </p>
+          <p>Final Fantasy XV, images, characters, etc. are copyright Square Enix.</p>
+        </div>
+      </div>
     <script src="./output/main.built.js" type="application/javascript"></script>
   </body>
 </html>

@@ -51,8 +51,14 @@ fn main() {
 
 fn start_server(port: u16) {
   let mut mount = Mount::new();
+  // Static assets
   mount.mount("/", Static::new(Path::new("www/index.html")));
+  mount.mount("/favicon.ico", Static::new(Path::new("www/favicon.ico")));
+  mount.mount("/finalf.ttf", Static::new(Path::new("www/finalf.ttf")));
+  mount.mount("/ferrum.otf", Static::new(Path::new("www/ferrum.otf")));
+  mount.mount("/style.css", Static::new(Path::new("www/style.css")));
   mount.mount("/output", Static::new(Path::new("www/output/")));
+  // Dynamic endpoint
   mount.mount("/upload", upload_handler);
 
   info!("Starting server on port {}...", port);
